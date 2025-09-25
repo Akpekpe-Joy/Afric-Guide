@@ -1,0 +1,504 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #faf7f5;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* HEADER */
+header {
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 1px solid #c00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  font-weight: 600;
+  z-index: 1000;
+  position: relative;
+}
+
+header .logo-text {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111;
+  margin-top: 4px;
+}
+.logo-text img {
+  vertical-align: middle; /* aligns with text vertically */
+  display: inline-block;  /* ensures proper alignment */
+}
+header .logo-text span {
+  color: #c00;
+}
+
+/* NAVIGATION */
+header .navigation ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+header .navigation ul li a {
+  font-size: 14px;
+  padding: 8px 10px;
+  letter-spacing: 1px;
+  color: #111;
+  transition: color 0.3s;
+}
+header .navigation ul li a:hover {
+  color: #8f8c8c;
+}
+
+.buttons{
+  margin-left: 150px;
+}
+header .sign-in {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 15px;
+  background: #008080;
+  color: #fff;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: 10px;
+}
+header .register{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 15px;
+  background: #c00;
+  color: #fff;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+/* Desktop buttons */
+header .sign-in:hover {
+    background-color: #006666; /* slightly darker teal */
+}
+
+header .register:hover {
+    background-color: #990000; /* slightly darker red */
+}
+
+/* TOGGLE BUTTONS */
+header .input-radio {
+  display: none;
+}
+header .menu-btn,
+header .cancel-btn {
+  font-size: 22px;
+  color: #c00;
+  cursor: pointer;
+  display: none;
+}
+
+/* CANCEL BTN INSIDE MENU */
+header .cancel-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+
+
+
+/* END OF HEADER */
+.page_wrapper{
+  min-height: auto;
+}
+
+
+
+/* CONTACT */
+.contact-bg{
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../image/contact-bg.jpg"); 
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-bg h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #f7327a;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #f7327a;
+    border-radius: 50%;
+}
+.text{
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+
+
+.back-ground{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% ;
+}
+.form-box{
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px 30px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.form-box .left{
+    position: relative;
+    text-align: center;
+
+}
+.form-box .left::after{
+    position: absolute;
+    content: "";
+    background: red;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    right: -17px;
+}
+.form-box .left .detail{
+    margin: 20px;
+}
+.form-box .left .detail i{
+    font-size: 40px;
+    color: red;
+    margin-bottom: 3px;
+}
+.form-box .left .details{
+    font-size: 14px;
+}
+.form-box .right{
+    margin-left: 60px;
+}
+.form-box .right h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: red;
+   
+}
+.form-box .right p{
+    font-size: 14px;
+    padding: 7px 0;
+
+}
+.form-box .right form input,
+.form-box .right form textarea{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    margin: 7px 0;
+    border-radius: 5px;
+    background: #faf7f5;
+}
+.form-box .right form input[type=submit]{
+    outline: none;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+@media(max-width:900px){
+   
+
+    .form-box .left{
+     display: none;
+    }
+    .form-box .left::after{
+        display: none;
+    }
+    .form-box .right{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+.form-box .right form input[type=submit]{
+    margin: 15px 0 0px 0;
+}
+}
+
+
+
+
+
+
+/* FOOTER */
+footer .footer-container{
+background: #303036;
+color: #fff;
+}
+.footer-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px 20px 100px; /* top right bottom left */
+}
+
+.footer-col h4 span{
+  color: #e91e64;
+}
+.footer-col h4{
+  margin-bottom: 25px;
+  font-size: 17px;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  width: 70px;
+  height: 2px;
+  position: absolute;
+  background: #e91e64;
+  bottom: -10px;
+}
+.footer-col ul li{
+  padding: 10px 0;
+}
+.footer-col ul li a{
+  font: 13px;
+}
+.footer-col ul li a:hover{
+  color: #e91e64;
+}
+
+
+/* Social Links */
+.footer-col .social-link {
+  margin: 15px 0;
+}
+
+.footer-col .social-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #444;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.footer-col .social-link a:hover {
+  background: #e91e64;
+  transform: translateY(-3px);
+}
+
+/* Contact Info */
+.footer-col .footer-info {
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+
+.footer-col .footer-info a {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.footer-col .footer-info i {
+  color: #e91e64; /* highlight icons */
+}
+
+
+footer .footer-bottom{
+  height: auto;
+  width: 100%;
+  background:#343a40 ;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px 7%;
+  font-size: 12px;
+  
+}
+.footer-bottom-links a{
+  padding: 0 5px;
+}
+.footer-bottom-links a:hover{
+  color: #e91e64;
+}
+
+
+
+
+/* ------------------------
+   RESPONSIVE MEDIA QUERIES
+------------------------- */
+
+/* ---------- Small tablets & large phones (768px–991px) ---------- */
+@media (max-width: 991px) {
+  /* NAVIGATION: Drawer menu */
+  header{
+    padding: 20px 7%;
+  }
+  header .buttons{
+    display: none;
+    margin-left: 0px;
+  }
+  header .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 60px 20px;
+    z-index: 999;
+  }
+  header .navigation ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  header .menu-btn {
+    display: block;
+  }
+  #menu-btn:checked ~ .navigation {
+    right: 0;
+  }
+  #menu-btn:checked ~ .menu-btn {
+    display: none;
+  }
+  #menu-btn:checked ~ .navigation .cancel-btn {
+    display: block;
+  }
+  #cancel-btn:checked ~ .navigation {
+    right: -100%;
+  }
+
+
+  /* Style the mobile buttons inside the menu */
+    header .navigation ul .buttons {
+        display: flex;
+        flex-direction: column; /* stack vertically */
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    header .navigation ul .buttons a {
+        padding: 10px;
+        text-align: center;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    header .navigation ul .buttons .sign-in {
+        background: #008080;
+    }
+
+    header .navigation ul .buttons .register {
+        background: #c00;
+    }
+    /* Mobile buttons inside drawer menu */
+      header .navigation ul .buttons .sign-in:hover {
+      background-color: #006666;
+    }
+    /* Mobile buttons inside drawer menu */
+    header .navigation ul .buttons .register:hover {
+    background-color: #990000;
+  }
+    footer .footer-row,
+  .footer-bottom{
+    flex-direction: column;
+    padding: 10px 40px;
+  }
+  .footer-bottom-links{
+    margin-top: 10px;
+  }
+  .footer-col{
+    padding-top: 40px;
+  }
+
+
+}
+
+/* Make footer stack on small screens */
+@media (max-width: 600px) {
+  footer .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Make footer stack on small screens */
+@media (max-width: 400px) {
+  footer .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
